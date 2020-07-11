@@ -6,7 +6,7 @@ phases:
       - echo logging into Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=820522829609.dkr.ecr.us-east-1.amazonaws.com/multistage-react-app
+      - REPOSITORY_URI=820522829609.dkr.ecr.us-east-1.amazonaws.com/multistage-react-app:build-7667a291-2721-4884-a6a1-1dbea4f31a8b
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
