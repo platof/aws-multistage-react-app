@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "820522829609.dkr.ecr.us-east-1.amazonaws.com/multistage-react-app",
+    "Name": "820522829609.dkr.ecr.us-east-1.amazonaws.com/multistage-react-app:latest",
     "Update": "true"
   },
   "Ports": [
