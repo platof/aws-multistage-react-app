@@ -21,7 +21,9 @@ phases:
       - echo Pushing the docker image...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-     
+      - printf '[{"name":"multistage-react-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
 
         
 
